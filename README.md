@@ -120,6 +120,18 @@ gem 'solidus_auth_devise'
 gem 'deface'
 ```
 
+End:
 
-gem 'rails', '~> 5.1.4'
-ruby '2.4.2'
+Run the final commands to finish setting up the Solidus Project:
+
+bundle exec rails g spree:install
+
+bundle exec rails g solidus:auth:install
+
+bundle exec rake railties:install:migrations
+
+bundle exec rake db:migrate
+
+Start the server!
+
+bundle exec rails s
